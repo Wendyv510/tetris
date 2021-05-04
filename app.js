@@ -34,4 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const theTetrominoes = [iTetromino, zTetromino, oTetromino, iTetromino]
+
+    let currentPosition = 4 
+    let random = Math.floor(Math.random()*theTetrominoes.lenght)
+    let current = theTetrominoes[0][0]
+
+    function draw() {
+        current.forEach(index => {
+            squares[currentPosition + index].classList.add('tetromino')
+        })
+    }
+    draw()
 })
+
