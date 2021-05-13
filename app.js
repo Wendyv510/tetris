@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
     let squares = Array.from(document.querySelectorAll('.grid div'))
-    const ScoreDisplay = document.querySelector('#score')
-    const StartBtn = document.querySelector('#start-button') 
+    const scoreDisplay = document.querySelector('#score')
+    const startBtn = document.querySelector('#start-button') 
     const width = 10 
+    let timerId 
 
     const lTetromino = [
         [1, width+1, width2+1, 2], 
@@ -127,14 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const upNextTetrominoes = [ 
         [1, displayWidth+1, displayWidth*2+1, 2],
-        [0, displayWidth, displayWidth+1, displayWidth*2+1]
+        [0, displayWidth, displayWidth+1, displayWidth*2+1],
         [1, displayWidth, displayWidth+1, displayWidth+2],
-        [0, 1, displayWidth, displayWidth+1]
+        [0, 1, displayWidth, displayWidth+1],
         [1, displayWidth+1, displayWidth*2+1, displayWidth*3+1]
 
     ]
 
-    funcion displayShape() {
+    function displayShape() {
         displaySquares.forEach(square => {
             square.classList.remove('tetromino')
         })
@@ -142,5 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
             displaySquares[displayIndex + index].classList.add('tetromino')
         }) 
     }
+
+    startBtn.addEventListener('click', () => {
+        if (timerId) {
+            clearInterval(timerId)
+            timerId = null 
+        } else {
+            draw() 
+            timerId = setInterval(moveDown, 1000)
+            nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+            displayShape() 
+        }
+    })
+
 })
 
