@@ -4,7 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.querySelector('#score')
     const startBtn = document.querySelector('#start-button') 
     const width = 10 
-    let timerId 
+    let timerId
+    let score = 0 
+    const colors = [ 
+        'orange',
+        'red',
+        'purple',
+        'green',
+        'blue' 
+    ]
 
     const lTetromino = [
         [1, width+1, width2+1, 2], 
@@ -34,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
         [width, width+1, width+2, width+3] 
     ]
 
-    const theTetrominoes = [iTetromino, zTetromino, oTetromino, iTetromino]
+    const theTetrominoes = [lTetromino, zTetromino, oTetromino, iTetromino]
 
     let currentPosition = 4 
     let currentRotation = 0
-    let random = Math.floor(Math.random()*theTetrominoes.lenght)
-    let current = theTetrominoes[random][0]
+    let random = Math.floor(Math.random()*theTetrominoes.length)
+    let current = theTetrominoes[random][currentRotation]
 
     function draw() {
         current.forEach(index => {
@@ -53,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    timerId = setInterval(moveDown, 1000)
+  //timerId = setInterval(moveDown, 1000)
 
     function control(e) {
         if(e.keyCode === 37) {
@@ -139,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displaySquares.forEach(square => {
             square.classList.remove('tetromino')
         })
-        upNextTerominoes[nextRandom].forEach(index => {
+        upNextTetrominoes[nextRandom].forEach(index => {
             displaySquares[displayIndex + index].classList.add('tetromino')
         }) 
     }
