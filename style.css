@@ -16,3 +16,10 @@
     background-color: blue; 
 }
 
+.mini-grid {
+    width: 80px;
+    height: 80 px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: yellow; 
+}
