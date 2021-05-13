@@ -78,10 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function freeze() {
         if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
             current.forEach(index => squares[currentPosition + index].classList.add('taken')) 
-            random = Math.floor(Math.random() * theTetrominoes.length)
+            random = nextRandom 
+            nextRandom = Math.floor(Math.random() * theTetrominoes.length)
             current = theTetrominoes[random][currentRotation]
             currentPosition = 4 
-            draw() 
+            draw()
+            displayShape() 
         }
     }
 
@@ -136,7 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
         displaySquares.forEach(square => {
             square.classList.remove('tetromino')
         })
-
+        upNextTerominoes[nextRandom].forEach(index => {
+            displaySquares[displayIndex + index].classList.add('tetromino')
+        }) 
     }
 })
 
