@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
-console.log(theTetrominoes)
+    
     let currentPosition = 4 
     let currentRotation = 0
     let random = Math.floor(Math.random()*theTetrominoes.length)
