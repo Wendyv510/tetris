@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     squares[index].style.backgroundColor = ''
                 })
                 const squaresRemoved = squares.splice(i, width)
+                
                 squares = squaresRemoved.concat(squares)
                 squares.forEach(cell => grid.appendChild(cell)) 
             }
