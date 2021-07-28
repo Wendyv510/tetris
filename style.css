@@ -1,5 +1,6 @@
 body {
     background-image: url("https://venturebeat.com/wp-content/uploads/2014/04/tetris.jpg?fit=721%2C600&strip=all")
+
 }
 
 .content {
@@ -42,16 +43,17 @@ body {
 }
 
 .grid {
-    width: 400px;
+    width: 200px;
     height: 400px;
     display: flex;
     flex-wrap: wrap; 
-    background-color: rgb(217, 255, 0)
+    background-color: white;
+    border: solid 2px black; 
 }
 
 .grid div {
-    height: 50px;
-    width: 50px; 
+    height: 20px;
+    width: 20px; 
  
 }
 
@@ -61,11 +63,12 @@ body {
 
 .mini-grid {
     margin-left: 50px;
-    width: 100px;
+    width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
-    background-color: yellow; 
+    background-color: white;
+    border: solid 2px black;  
 }
 
 .mini-grid div {
