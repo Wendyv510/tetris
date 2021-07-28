@@ -61,14 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
             squares[currentPosition + index].classList.add('tetromino')
             squares[currentPosition + index].style.backgroundColor = colors[random]
         })
-    }
+    };
     
     function undraw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.remove('tetromino') 
             squares[currentPosition + index].style.backgroundColor = ''
         })
-    }
+    };
 
   timerId = setInterval(moveDown, 1000)
 
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addScore()
             gameOver() 
         }
-    }
+    };
 
     function moveLeft() {
         undraw() 
