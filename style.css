@@ -8,6 +8,33 @@ body {
     padding: 50px; 
 }
 
+.content h1 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 100px; 
+    color: black;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;  
+}
+
+.content h3 {
+    font-family: Arial, Helvetica, sans-serit;
+    font-size: 60px; 
+    color: black; 
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white; 
+}
+
+.content button {
+    background-color: black; 
+    border: none;
+    color: white;  
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
 .container {
     display: flex; 
     max-width: 500px;
@@ -16,15 +43,15 @@ body {
 
 .grid {
     width: 400px;
-    height: 800px;
+    height: 400px;
     display: flex;
     flex-wrap: wrap; 
     background-color: rgb(217, 255, 0)
 }
 
 .grid div {
-    height: 20px;
-    width: 20px; 
+    height: 50px;
+    width: 50px; 
  
 }
 
@@ -35,7 +62,7 @@ body {
 .mini-grid {
     margin-left: 50px;
     width: 100px;
-    height: 100px;
+    height: 80px;
     display: flex;
     flex-wrap: wrap;
     background-color: yellow; 
