@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     };
 
-  timerId = setInterval(moveDown, 1000)
+  //timerId = setInterval(moveDown, 1000)
 
     function control(e) {
         if(e.keyCode === 37) {
