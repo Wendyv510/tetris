@@ -15,8 +15,8 @@ body {
 }
 
 .grid {
-    width: 200px;
-    height:400;
+    width: 400px;
+    height: 800px;
     display: flex;
     flex-wrap: wrap; 
     background-color: rgb(217, 255, 0)
@@ -34,8 +34,8 @@ body {
 
 .mini-grid {
     margin-left: 50px;
-    width: 80px;
-    height: 80 px;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
     background-color: yellow; 
