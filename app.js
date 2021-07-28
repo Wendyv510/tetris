@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayShape() {
         displaySquares.forEach(square => {
-            square.classList.remove('tetromino')
-            square.style.backgroundColor = '' 
+            squares.classList.remove('tetromino')
+            squares.style.backgroundColor = '' 
         })
         upNextTetrominoes[nextRandom].forEach(index => {
             displaySquares[displayIndex + index].classList.add('tetromino')
