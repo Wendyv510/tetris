@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.querySelector('#score')
     const startBtn = document.querySelector('#start-button') 
     const width = 10 
+    let nextRandom = 0
     let timerId
     let score = 0 
     const colors = [ 
@@ -184,8 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayShape() {
         displaySquares.forEach(square => {
-            squares.classList.remove('tetromino')
-            squares.style.backgroundColor = '' 
+            square.classList.remove('tetromino')
+            square.style.backgroundColor = '' 
         })
         upNextTetrominoes[nextRandom].forEach(index => {
             displaySquares[displayIndex + index].classList.add('tetromino')
