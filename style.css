@@ -1,5 +1,17 @@
+body {
+    background-image: url("https://venturebeat.com/wp-content/uploads/2014/04/tetris.jpg?fit=721%2C600&strip=all")
+}
+
+.content {
+    max-width: 300px;
+    margin: auto; 
+    padding: 50px; 
+}
+
 .container {
     display: flex; 
+    max-width: 500px;
+    margin: auto; 
 }
 
 .grid {
