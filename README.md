@@ -1,5 +1,7 @@
 # tetris
 
+Deployed with Netlify @ https://6113e2b12a36820632ef09b4--cranky-lalande-fc9e04.netlify.app/
+
 Installation: To use the Tetris app, in terminal ... -git clone https://github.com/Wendyv510/tetris.git -cd tetris
 -open index.html (if that doesn't work, right click on index.html file and choose Reveal in Explorer and open)
 
